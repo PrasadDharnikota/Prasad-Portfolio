@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasad-developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body class="body">
+    <div class="cursor">
+
+    </div>
+    <!-- side bar start -->
+    <div class="side-bar">
+        <div class="top-content">
+            <div class="logo">
+                <img  class="logo" src="logoforport.png" >
+            </div>
+            <div class="hamburgerx">
+                <i class="fa-solid fa-xmark fa-2xl wrong " style="color: #f0f2f4; padding:30px; margin-bottom: 10px;"></i></div>
+
+        </div><br>
+        <div class="nav-content2">
+            <ul>
+              <a href="index.html">
+                <li id="active">Home</li>
+              </a><a href="contact.html">
+                <li>Contact</li>
+              </a><a href="about.html">
+                <li>About</li>
+              </a><a href="Education.html">
+                <li>Education</li>
+              </a>
+            </ul>
+        </div>
+    </div>
+    <!-- side bar end -->
+    <!-- Nav bar start -->
+    <div class="nav-bar flex">
+        <div class="logo-content">
+            <img src="logoforport.png" >
+            <h3>Prasad D </h3>
+        </div>
+        <div class="ham">
+            <i class="fa-solid fa-bars fa-2xl ham" style="color: #e5e7eb; padding:20px"></i>
+
+        </div>
+        <div class="nav-content">
+            <ul class="flex-center">
+            <a href="index.html" > <li id="active"> Home </li></a>
+            <a href="contact.html"><li> Contact</li> </a>
+            <a href="about.html"><li>About</li></a>
+            <a href="Education.html"><li>Education</li></a>
+
+        </ul>
+        </div>
+    </div>
+    <!-- Nav bar End -->
+
+    <main>
+        <section class="section1 flex-all">
+            <div class="left flex"> 
+                <p class="pid">Welcome to my world! </p> <br>
+                <h1>Hi there!</h1> 
+                <h3>My name is <b class="orange">prasad_D</b></h3> 
+                <p class="pid2"  >I am a student ,studying engineering at Andhra university</p> 
+                <p class="pid3" >The languages i prefered to make this web page is html css and   i am interested in doing projects using React. &nbsp; Contact me for more info   
+                </p> 
+            </div>
+            <div class="right flex-all ">
+                
+                <div class="box ">
+                    <div class="box1">
+                        <div class="img-content"> 
+<img  class="bimg" src="https://images.unsplash.com/photo-1698414786771-0fa24cabcd0b?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" alt="">
+<div class="main-img-content ">
+    <img  class="img1" src="prasad-img.jpg">
+</div>
+                        </div>
+                    </div>
+                    <div class="box2   ">
+                        
+                        <p>Education is the most powerful weapon which we use to change the world</p>
+
+                            <a href="contact.html">
+                                <button>Contact me &#8594;</button>
+                                 
+                            </a>
+
+                         
+                    </div>
+                </div>
+            </div>
+            
+     
+        </section>
+    </main>
+    
+    <script>
+        var side=document.querySelector(".side-bar");
+        var wrong=document.querySelector(".wrong");
+        var ham=document.querySelector(".ham");
+        side.style.left="-100%";
+        wrong.addEventListener("click",function()
+        {
+            side.style.left="-100%";
+        });
+        ham.addEventListener("click", function() 
+        {
+            side.style.left="0px";
+        });
+        var body=document.querySelector(".body");
+        var cur=document.querySelector(".cursor");
+        body.addEventListener("mousemove",function(dets)
+       {
+        cur.style.left=dets.x+"px";
+        cur.style.top=dets.y+"px";
+       })
+        
+ 
+    </script>
+</body>
+</html>

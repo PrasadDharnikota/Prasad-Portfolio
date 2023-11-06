@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasad-developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<body class="body">
+    <div class="cursor">
+
+    </div>
+        <!-- side bar start -->
+        <div class="side-bar">
+            <div class="top-content">
+                <div class="logo">
+                    <img  class="logo" src="logoforport.png" >
+                </div>
+                <div class="hamburgerx">
+                    <i class="fa-solid fa-xmark fa-2xl wrong " style="color: #f0f2f4; padding:30px; margin-bottom: 10px;"></i></div>
+    
+            </div><br>
+            <div class="nav-content2">
+                <ul>
+                  <a href="index.html">
+                    <li >Home</li>
+                  </a><a href="contact.html">
+                    <li id="active">Contact</li>
+                  </a><a href="about.html">
+                    <li>About</li>
+                  </a><a href="Education.html">
+                    <li>Education</li>
+                  </a>
+                </ul>
+            </div>
+        </div>
+        <!-- side bar end -->
+
+    <!-- Nav bar start -->
+    <div class="nav-bar flex">
+        <div class="logo-content">
+            <img src="logoforport.png" >
+            <h3>Prasad D </h3>
+        </div>
+        <div class="ham">
+            <i class="fa-solid fa-bars fa-2xl ham" style="color: #e5e7eb; padding:20px"></i>
+
+        </div>
+        <div class="nav-content">
+            <ul class="flex-center">
+            <a href="index.html" > <li > Home </li></a>
+            <a href="contact.html"><li id="active"> Contact</li> </a>
+            <a href="about.html"><li>About</li></a>
+            <a href="Education.html"><li>Education</li></a>
+        </ul>
+        </div>
+    </div>
+    <!-- Nav bar End -->
+    <!-- Form start -->
+<div class="form-action-container" padtopdesktop-50  >
+    <div class="form-action-starting ">
+        <div class="section-title  padbottomdesktop-10 padtopmobile-50 padbottomdesktopmobile-10">
+
+            <div class="title">
+                <h3 style="color:black">Contact us</h3>
+            </div>
+            <div class="underline" style="background-color: black"></div>
+        </div>
+        <form  class="form">
+            <div class="form-box">
+                <input type="text" id="name" placeholder="Enter NAME"  required minlength="10" autocomplete="off">
+                 <input type="text" id="branch" placeholder="Enter city" required autocomplete="off">
+                <div class="textarea2"><textarea name="" id="message" cols="25" rows="3"
+                        placeholder="@Description:" required></textarea></div>
+            </div>
+            <div class="buttons">
+                <button class="btn" Value="Submit">Submit</button>
+                <button class="btn" type="reset" value="Reset">Reset</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+ 
+     
+     <script>
+        var side=document.querySelector(".side-bar");
+        var wrong=document.querySelector(".wrong");
+        var ham=document.querySelector(".ham");
+        side.style.left="-100%";
+        wrong.addEventListener("click",function()
+        {
+            side.style.left="-100%";
+        });
+        ham.addEventListener("click", function() 
+        {
+            side.style.left="0px";
+        });
+        var body=document.querySelector(".body");
+        var cur=document.querySelector(".cursor");
+        body.addEventListener("mousemove",function(dets)
+       {
+        cur.style.left=dets.x+"px";
+        cur.style.top=dets.y+"px";
+       })
+        
+ 
+    </script>
+<!-- Form End -->
+</body>
+</html>

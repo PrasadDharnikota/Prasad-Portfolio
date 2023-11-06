@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasad-developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@800;900&family=Montserrat:wght@300&family=Noto+Sans:wght@300&family=Open+Sans&family=Poppins:wght@500&family=Roboto+Mono&family=Roboto:ital,wght@0,100;1,300&display=swap');
+      </style>
+    <style>
+    *
+    {
+        margin:0;
+        padding:0;
+        font-family: 'Roboto Mono', monospace;
+        }
+
+        html,body{
+            width:100%;
+            height:100%;
+            
+        }
+        .side-bar
+ {
+   
+    left:-100%;
+    transition: 1s;
+ }
+ .cursor
+        {
+            width:30px;
+            height:30px;
+            border-radius: 50%;
+         
+            background-color: rgb(219, 195, 14);
+            mix-blend-mode: difference;
+            position: absolute;
+            transition: 0.1s;
+            border-bottom: 20px 20px green;
+        }
+        .contentofabout
+        {
+           
+        color:white;
+        height:100%;
+       display:flex;
+       align-items: center;
+       justify-content: center;
+        width:100%;
+        position:relative;
+      
+      }
+      .center-content
+      {
+       width:80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height:300px;
+        user-select: none;
+        color:#F7CD46;  
+      }
+      .center-content h1{
+        font-size: 43px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-stretch: expanded;
+      }
+      .center-content h3{
+        font-size: 23px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-stretch: expanded;
+      }
+      .center-content p{
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-stretch: expanded;
+      }
+      .center-content h4{
+        font-size: 24px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-stretch: expanded;
+      }
+      @media screen and (max-width:991px)
+ {
+    .center-content h1{
+        font-size: 21px;
+        
+      }
+    .center-content h3
+    {
+        font-size: 18px;
+    }
+    .center-content p
+    {
+        font-size: 14px;
+
+    }
+ .center-content h4{
+    font-size: 20px;
+     
+      }
+    }
+    </style>
+
+</head>
+<body class="body">
+<div class="cursor">
+
+</div>
+    <!-- side bar start -->
+    <div class="side-bar">
+      <div class="top-content">
+          <div class="logo">
+              <img  class="logo" src="logoforport.png" >
+          </div>
+          <div class="hamburgerx">
+            <i class="fa-solid fa-xmark fa-2xl wrong " style="color: #f0f2f4; padding:30px; margin-bottom: 10px;"></i></div>
+
+      </div><br>
+      <div class="nav-content2">
+          <ul>
+            <a href="index.html">
+              <li >Home</li>
+            </a><a href="contact.html">
+              <li>Contact</li>
+            </a><a href="about.html">
+              <li id="active">About</li>
+            </a><a href="Education.html">
+              <li>Education</li>
+            </a>
+          </ul>
+      </div>
+  </div>
+  <!-- side bar end -->
+    <!-- Nav bar start -->
+    <div class="nav-bar flex">
+      <div class="logo-content">
+          <img src="logoforport.png" >
+          <h3>Prasad D </h3>
+      </div>
+      <div class="ham">
+          <i class="fa-solid fa-bars fa-2xl ham" style="color: #e5e7eb; padding:20px"></i>
+
+      </div>
+      <div class="nav-content">
+          <ul class="flex-center">
+          <a href="index.html" > <li > Home </li></a>
+          <a href="contact.html"><li> Contact</li> </a>
+          <a href="about.html"><li id="active">About</li></a>
+          <a href="Education.html"><li>Education</li></a>
+      </ul>
+      </div>
+  </div>
+  <!-- Nav bar End -->
+
+
+
+        <!-- Content start -->
+        <div class="contentofabout">
+            <div class="center-content">
+          <h1>WELCOME,</h1>
+          <h3>I hope your are fine.</h3><br>
+         
+          <p>My name is D Durga Prasad .S/O D.Ram Chandra ,I am  from Rajamundry , Andhra Pradesh(India),I got certified in html css and JavaScript,Waiting for internship on fullstack deveopment i am interested in technologies like  React ,sql,javascript,at present i am learning java </p>
+          <br><p>My email: Prasadcm026@gmail.com</p>
+         <br><h4>Nice to meet you.</h4>
+             </div>
+        </div>
+        <!-- Content End -->
+
+    </div>
+    
+    <script>
+      var side=document.querySelector(".side-bar");
+      var wrong=document.querySelector(".wrong");
+      var ham=document.querySelector(".ham");
+      side.style.left="-100%";
+      wrong.addEventListener("click",function()
+        {
+            side.style.left="-100%";
+        });
+        ham.addEventListener("click", function() 
+        {
+            side.style.left="0px";
+        });
+      ham.addEventListener("click", function() 
+      {
+          side.style.left="0%";
+      });
+      var body=document.querySelector(".body");
+      var cur=document.querySelector(".cursor");
+      body.addEventListener("mousemove",function(dets)
+     {
+      cur.style.left=dets.x+"px";
+      cur.style.top=dets.y+"px";
+     })
+      
+
+  </script>
+</body>
+</html>
